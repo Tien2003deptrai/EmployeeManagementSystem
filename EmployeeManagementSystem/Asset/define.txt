@@ -1,0 +1,15 @@
+string selectUsername = "SELECT COUNT(id) FROM User WHERE username = @user";
+int count = (int)checkUser.ExecuteScalar();
+
+=> ExcuteSchalar() => trả về đếm count trong bảng user
+
+ExecuteNonQuery() = query (nodejs)
+
+SqlConnection = createConnection (nodejs)
+
+
+SqlDataAdapter adpter = new SqlDataAdapter(conn);
+DataTable table = new DataTable();
+adpter.Fill(table);
+=> đọc dữ liệu csdl vào dataTable (bộ nhớ tạm thời ứng dụng
+   cứ nghĩ là localstorage)
